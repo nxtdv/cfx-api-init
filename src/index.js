@@ -8,6 +8,7 @@ const cfxApi = async () => {
     players.getPlayerById(app, 6148) // Replace 6148 with a player ID
     players.getAllPlayers(app) // Get all players
     players.exportPlayersIntoJSON(app) // Export all players into a JSON file in the dist folder.
+    players.exportPlayerByIdIntoJSON(app, 6148) // Export a player into a JSON file in the dist folder.
 }
 
 cfxApi()

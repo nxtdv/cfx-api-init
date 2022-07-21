@@ -21,4 +21,13 @@ export default {
             if (err) throw err
         })
     },
+
+    async exportPlayerByIdIntoJSON(serverData, id) {
+        const data = await serverData
+        const players = await data.players
+        const player = players.find((player) => player.id === id)
+        fs.writeFileSync(`./dist/player-${id}.json`, JSON.stringify(player), (err) => {
+            if (err) throw err
+        })
+    },
 }
