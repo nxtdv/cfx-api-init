@@ -23,7 +23,6 @@
         "prettier": "^2.7.1"
     },
     "dependencies": {
-        "cfx-api": "^1.0.12",
-        "fs": "^0.0.1-security"
+        "cfx-api": "^1.0.12"
     }
 }
