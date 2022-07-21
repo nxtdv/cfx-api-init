@@ -1,0 +1,29 @@
+{
+    "name": "cfx-api-init",
+    "version": "1.0.0",
+    "description": "Boilerplate for cfx-api",
+    "main": "src/index.js",
+    "author": "nxtdv",
+    "license": "ISC",
+    "type": "module",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "npm run format:fix && npm run lint:fix && node src/index.js",
+        "format:fix": "prettier --write .",
+        "lint:fix": "eslint --fix ."
+    },
+    "keywords": [
+        "fivem",
+        "node",
+        "cfx-api"
+    ],
+    "devDependencies": {
+        "eslint": "^8.20.0",
+        "eslint-config-prettier": "^8.5.0",
+        "prettier": "^2.7.1"
+    },
+    "dependencies": {
+        "cfx-api": "^1.0.12",
+        "fs": "^0.0.1-security"
+    }
+}
