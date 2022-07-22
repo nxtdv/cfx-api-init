@@ -18,7 +18,8 @@ export default {
     async exportPlayersIntoJSON(serverData) {
         const data = await serverData
         const players = await data.players
-        fs.writeFileSync('./dist/players.json', JSON.stringify(players), (err) => {
+
+        fs.writeFileSync('./dist/players.json', JSON.stringify(players, null, 4), (err) => {
             if (err) throw err
         })
     },
@@ -29,7 +30,7 @@ export default {
         const player = players.find((player) => player.id === id)
 
         if (player) {
-            fs.writeFileSync(`./dist/player-${id}.json`, JSON.stringify(player), (err) => {
+            fs.writeFileSync(`./dist/player-${id}.json`, JSON.stringify(players, null, 4), (err) => {
                 if (err) throw err
             })
         }
